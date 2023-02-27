@@ -29,17 +29,16 @@ public class CarServiceImpl implements CarsService {
                 '}';
     }
 
-    @Override
+
     public List<Car> getCarList() {
         return carList;
     }
 
     @Override
-    public List<Car> carsCount(List<Car> list, int number) {
-        return list.stream().limit(number).collect(Collectors.toList());
+    public List<Car> carsCount(int num) {
+        return carList.stream().limit(num).collect(Collectors.toList());
     }
-
-
+//    list.stream().limit(num).collect(Collectors.toList());
 }
 
 
